@@ -1,3 +1,7 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500&display=swap');
+ 
+
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -5,6 +9,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
@@ -46,6 +51,38 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+/* ── Zesto brand additions ── */
+  --color-bg-primary:   #FFFAF5;
+  --color-bg-surface:   #FFF4E8;
+  --color-bg-dark:      #1A1208;
+  --color-orange-brand: #FF5C1A;
+  --color-yellow-warm:  #FFB800;
+  --color-text-muted:   #7A6A56;
+  --color-border-warm:  #EDE4D8;
+
+  --font-display: "Clash Display", sans-serif;
+  --font-body:    "Satoshi", sans-serif;
+  --font-sans:    "Satoshi", sans-serif;
+
+  --animate-float:      float 3s ease-in-out infinite;
+  --animate-rider-move: rider-move 4s ease-in-out infinite alternate;
+  --animate-fade-up:    fade-up 0.5s ease-out both;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-8px); }
+  }
+  @keyframes rider-move {
+    0%   { left: 15%; }
+    50%  { left: 55%; }
+    100% { left: 75%; }
+  }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
 }
 
 :root {
@@ -81,6 +118,13 @@
   --sidebar-ring: oklch(0.708 0 0);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
+  --bg-primary:    #FFFAF5;
+  --bg-surface:    #FFF4E8;
+  --bg-dark:       #1A1208;
+  --accent-orange: #FF5C1A;
+  --accent-yellow: #FFB800;
+  --text-muted:    #7A6A56;
+  --border-warm:   #EDE4D8;
 }
 
 .dark {
@@ -121,10 +165,48 @@
   * {
     @apply border-border outline-ring/50;
   }
-  body {
-    @apply bg-background text-foreground;
-  }
   html {
     @apply font-sans;
+    scroll-behavior: smooth;  
+  }
+  body {
+    @apply bg-background text-foreground;
+     background-color: var(--bg-primary);  /* ← add: overrides to warm off-white */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 300px 300px;
+  }
+  h1, h2, h3, h4, h5, h6 {                /* ← add this block */
+    font-family: "Clash Display", sans-serif;
+    font-weight: 700;
   }
 }
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 24px rgba(26, 18, 8, 0.08);
+  }
+  .orange-glow {
+    box-shadow: 0 4px 20px rgba(255, 92, 26, 0.35);
+  }
+  .orange-glow:hover {
+    box-shadow: 0 6px 28px rgba(255, 92, 26, 0.50);
+  }
+  .text-gradient-orange {
+    background: linear-gradient(135deg, #FF5C1A 0%, #FFB800 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.AccordionTrigger svg { color: var(--accent-orange); }
