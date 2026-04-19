@@ -1,11 +1,10 @@
- --- 
+---
 
 # 🍔 Zesto — Food Delivery App Landing Page
 
 ### High-converting product landing page designed to turn hungry visitors into app users
 
-
-[ Live Demo ](https://your-vercel-link.vercel.app) • [ GitHub ](https://github.com/your-repo) • [ Watch Walkthrough ](#)
+[ Live Demo ](https://zesto-xi.vercel.app/) • [ GitHub ](https://github.com/fasih124/zesto) • [ Portfolio ](https://www.buildbyfasih.me/)
 
 ---
 
@@ -27,10 +26,10 @@ This is not a generic SaaS template — it’s a **consumer-focused, high-conver
 
 Most food delivery apps struggle with:
 
-- Generic, boring landing pages  
-- Poor storytelling of the actual product experience  
-- Low conversion from visitors → app downloads  
-- No clear differentiation from competitors  
+- Generic, boring landing pages
+- Poor storytelling of the actual product experience
+- Low conversion from visitors → app downloads
+- No clear differentiation from competitors
 
 The goal of this project was to design a landing page that:
 
@@ -79,21 +78,26 @@ Instead of static screenshots, the UI is recreated using real components — mak
 ## 🧱 Tech Stack
 
 Frontend:
+
 - Next.js 14 (App Router)
 - React
 
 Styling:
+
 - Tailwind CSS
 - Custom design system (CSS variables)
 
 UI & Components:
+
 - shadcn/ui
 - Lucide React Icons
 
 Animations:
+
 - Framer Motion
 
 Deployment:
+
 - Vercel
 
 ---
@@ -135,8 +139,6 @@ AI was used as a **productivity tool**, not a shortcut — helping maintain cons
   <td> <img src="./photos/04.png" /></td>
   </table>
 
-
-
 ---
 
 ## 💼 Use Case
@@ -164,10 +166,10 @@ This type of landing page is ideal for:
 
 If you’re building:
 
-- A mobile app landing page  
-- A SaaS product  
-- A dashboard or internal tool  
-- A startup MVP  
+- A mobile app landing page
+- A SaaS product
+- A dashboard or internal tool
+- A startup MVP
 
 I can help you design and build something that not only works — but converts.
 
