@@ -133,10 +133,10 @@ AI was used as a **productivity tool**, not a shortcut — helping maintain cons
   </tr>
    <tr>
   </tr>
-  <td>    <img  src="./photos/01.png" /> </td>
-  <td>  <img  src="./photos/02.png" /></td>
-  <td> <img src="./photos/03.png" /></td>
-  <td> <img src="./photos/04.png" /></td>
+  <td>    <img  src="./photos/01.PNG" /> </td>
+  <td>  <img  src="./photos/02.PNG" /></td>
+  <td> <img src="./photos/03.PNG" /></td>
+  <td> <img src="./photos/04.PNG" /></td>
   </table>
 
 ---
